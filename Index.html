@@ -106,4 +106,1450 @@ header {
 
 .banner-info p {
     color: #c5d5df;
-    line
+    line-height: 1.4;
+}
+
+/* ================= NAV ================= */
+
+nav {
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    background: rgba(2, 8, 18, .97);
+    border-top: 1px solid rgba(0, 200, 255, .1);
+}
+
+nav button {
+    height: 55px;
+    border: 0;
+    background: transparent;
+    color: #c8d8e5;
+    padding: 0 24px;
+    cursor: pointer;
+    font-weight: bold;
+    position: relative;
+}
+
+nav button:hover,
+nav button.active {
+    color: white;
+}
+
+nav button.active::after {
+    content: "";
+    position: absolute;
+    left: 20%;
+    right: 20%;
+    bottom: 0;
+    height: 3px;
+    background: var(--cyan);
+    box-shadow: 0 0 12px var(--cyan);
+}
+
+/* ================= LAYOUT ================= */
+
+.container {
+    max-width: 1550px;
+    margin: auto;
+    padding: 12px;
+    display: grid;
+    grid-template-columns: 260px minmax(500px, 1fr) 290px;
+    gap: 12px;
+}
+
+.panel {
+    background:
+        linear-gradient(
+            145deg,
+            rgba(8, 27, 46, .96),
+            rgba(2, 10, 20, .96)
+        );
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    box-shadow:
+        0 0 25px rgba(0, 140, 255, .06),
+        inset 0 0 20px rgba(0, 180, 255, .025);
+}
+
+.panel-title {
+    padding: 15px;
+    color: #e8f8ff;
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom: 1px solid rgba(0, 200, 255, .15);
+}
+
+/* ================= LEFT ================= */
+
+.left-column {
+    min-width: 0;
+}
+
+.chapter-list {
+    padding: 8px;
+}
+
+.chapter {
+    display: flex;
+    gap: 10px;
+    padding: 8px;
+    border-radius: 7px;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+.chapter:hover {
+    background: rgba(0, 174, 255, .08);
+}
+
+.chapter.active {
+    background: linear-gradient(
+        90deg,
+        #0871df,
+        #0758b9
+    );
+    box-shadow: 0 0 15px rgba(0, 132, 255, .25);
+}
+
+.chapter img {
+    width: 55px;
+    height: 55px;
+    object-fit: cover;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 200, 255, .5);
+}
+
+.chapter-info {
+    flex: 1;
+    font-size: 12px;
+}
+
+.chapter-info strong {
+    display: block;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.chapter-info span {
+    color: #c0d4e1;
+}
+
+.sagas {
+    margin-top: 12px;
+    padding-bottom: 12px;
+}
+
+.saga {
+    margin: 5px 12px;
+    padding: 10px;
+    border-radius: 7px;
+    background: #071a2d;
+    color: #bcd4e5;
+    font-size: 13px;
+}
+
+.saga:hover {
+    background: #0a2944;
+}
+
+/* ================= READER ================= */
+
+.reader {
+    padding: 10px;
+}
+
+.reader-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 10px;
+    margin-bottom: 8px;
+}
+
+.toolbar-btn {
+    border: 0;
+    color: white;
+    background: transparent;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.page-select {
+    border: 1px solid var(--cyan);
+    background: #061727;
+    color: white;
+    border-radius: 20px;
+    padding: 8px 22px;
+    min-width: 145px;
+    text-align: center;
+}
+
+.comic-frame {
+    position: relative;
+    width: 100%;
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #010409;
+    border: 1px solid rgba(0, 204, 255, .7);
+    overflow: hidden;
+}
+
+.comic-frame::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(0, 200, 255, .04),
+            transparent
+        );
+}
+
+#comicPage {
+    width: 100%;
+    max-height: 720px;
+    object-fit: contain;
+    display: block;
+}
+
+.image-error {
+    position: absolute;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px;
+    background: #030812;
+    color: #8edfff;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+}
+
+.control-group {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.control-btn {
+    background: #07192b;
+    color: white;
+    border: 1px solid #17476a;
+    padding: 8px 13px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.control-btn:hover {
+    background: #0c3150;
+    border-color: var(--cyan);
+}
+
+.page-number {
+    width: 45px;
+    text-align: center;
+    background: #020a13;
+    color: white;
+    border: 1px solid #155274;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+/* ================= THUMBNAILS ================= */
+
+.thumbnail-area {
+    margin-top: 8px;
+    padding: 8px;
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    background: #020b16;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+}
+
+.thumbnail {
+    flex: 0 0 75px;
+    height: 92px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+    background: #071321;
+    position: relative;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.thumbnail span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, .75);
+    text-align: center;
+    font-size: 11px;
+    padding: 3px;
+}
+
+.thumbnail.active {
+    border-color: var(--cyan);
+    box-shadow: 0 0 14px rgba(0, 210, 255, .55);
+}
+
+/* ================= RIGHT ================= */
+
+.right-column {
+    min-width: 0;
+}
+
+.cover {
+    padding: 10px;
+}
+
+.cover img {
+    width: 100%;
+    border-radius: 7px;
+    display: block;
+    border: 1px solid #12618c;
+}
+
+.details {
+    padding: 12px;
+}
+
+.details .chapter-label {
+    color: var(--cyan);
+    font-size: 13px;
+}
+
+.details h2 {
+    margin: 5px 0 10px;
+}
+
+.progress-text {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: #9eb8ca;
+    margin-bottom: 5px;
+}
+
+.progress {
+    height: 8px;
+    background: #071a2b;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 6.66%;
+    background: linear-gradient(
+        90deg,
+        #007fff,
+        #00eaff
+    );
+    box-shadow: 0 0 12px #00cfff;
+}
+
+.next-btn {
+    width: 100%;
+    margin-top: 12px;
+    border: 0;
+    padding: 12px;
+    color: white;
+    background: linear-gradient(
+        90deg,
+        #008cf5,
+        #00baf7
+    );
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.next-btn:hover {
+    filter: brightness(1.15);
+}
+
+/* ================= PAGE GRID ================= */
+
+.page-grid {
+    padding: 12px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 7px;
+}
+
+.page-grid button {
+    height: 38px;
+    background: #061525;
+    color: #d9f3ff;
+    border: 1px solid #17405d;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.page-grid button:hover {
+    border-color: var(--cyan);
+}
+
+.page-grid button.active {
+    background: #008df0;
+    border-color: #00dfff;
+    box-shadow: 0 0 10px rgba(0, 190, 255, .5);
+}
+
+/* ================= LEGEND ================= */
+
+.legend {
+    padding: 12px;
+}
+
+.legend-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 8px 0;
+    color: #c1d4df;
+    font-size: 12px;
+}
+
+.legend-icon {
+    width: 30px;
+    text-align: center;
+    font-size: 20px;
+}
+
+/* ================= QUOTE ================= */
+
+.quote {
+    margin: 10px;
+    padding: 20px 14px;
+    min-height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 8px;
+    background:
+        linear-gradient(
+            rgba(2, 10, 18, .75),
+            rgba(2, 10, 18, .9)
+        ),
+        url("assets/capa.jpg");
+    background-size: cover;
+    background-position: center;
+    font-style: italic;
+    color: #e9f8ff;
+    line-height: 1.5;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1150px) {
+    .container {
+        grid-template-columns: 220px minmax(400px, 1fr);
+    }
+
+    .right-column {
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 800px) {
+    .banner {
+        height: 145px;
+    }
+
+    .logo {
+        font-size: 26px;
+        left: 15px;
+        top: 20px;
+    }
+
+    .banner-info {
+        display: none;
+    }
+
+    nav {
+        overflow-x: auto;
+        justify-content: flex-start;
+    }
+
+    nav button {
+        padding: 0 15px;
+        white-space: nowrap;
+    }
+
+    .container {
+        display: block;
+    }
+
+    .left-column,
+    .right-column {
+        margin-bottom: 10px;
+    }
+
+    .chapter-list {
+        display: flex;
+        overflow-x: auto;
+    }
+
+    .chapter {
+        min-width: 210px;
+    }
+
+    .comic-frame {
+        min-height: 350px;
+    }
+
+    .right-column {
+        display: block;
+    }
+}
+
+@media (max-width: 500px) {
+    .logo {
+        font-size: 22px;
+    }
+
+    .logo small {
+        font-size: 7px;
+        letter-spacing: 3px;
+    }
+
+    .reader-toolbar {
+        font-size: 11px;
+    }
+
+    .page-select {
+        min-width: 110px;
+        padding: 7px;
+    }
+
+    .comic-frame {
+        min-height: 250px;
+    }
+
+    .thumbnail {
+        flex-basis: 62px;
+        height: 75px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="banner">
+
+        <div class="logo">
+            VELOCITY<br>
+            <span>SPIDER</span>
+
+            <small>
+                MAIS RÁPIDO QUE O TEMPO
+            </small>
+        </div>
+
+        <div class="banner-info">
+            <div class="chapter">
+                CAPÍTULO 01
+            </div>
+
+            <h1>O DESPERTAR</h1>
+
+            <p>
+                Tudo começou com um acidente...
+                mas o que parecia o fim,
+                foi apenas o começo.
+            </p>
+        </div>
+
+    </div>
+
+    <nav>
+
+        <button>INÍCIO</button>
+
+        <button class="active">
+            HQ
+        </button>
+
+        <button>PERSONAGEM</button>
+
+        <button>PODERES</button>
+
+        <button>CAPÍTULOS</button>
+
+        <button>SOBRE</button>
+
+    </nav>
+
+</header>
+
+
+<main class="container">
+
+    <!-- ================= LEFT ================= -->
+
+    <aside class="left-column">
+
+        <section class="panel">
+
+            <div class="panel-title">
+                CAPÍTULOS
+            </div>
+
+            <div
+                class="chapter-list"
+                id="chapterList">
+            </div>
+
+        </section>
+
+
+        <section class="panel sagas">
+
+            <div class="panel-title">
+                SAGAS
+            </div>
+
+            <div class="saga">
+                🕷️ Saga do Despertar
+                <br>
+                <small>(1 - 5)</small>
+            </div>
+
+            <div class="saga">
+                🌃 Saga da Cidade
+                <br>
+                <small>(6 - 10)</small>
+            </div>
+
+            <div class="saga">
+                🔥 Saga da Conspiração
+                <br>
+                <small>(11 - 15)</small>
+            </div>
+
+        </section>
+
+    </aside>
+
+
+    <!-- ================= CENTER ================= -->
+
+    <section>
+
+        <div class="panel reader">
+
+            <div class="reader-toolbar">
+
+                <button
+                    class="toolbar-btn"
+                    onclick="previousPage()">
+                    ‹ Página anterior
+                </button>
+
+                <div
+                    class="page-select"
+                    id="pageLabel">
+                    Página 1 de 15
+                </div>
+
+                <button
+                    class="toolbar-btn"
+                    onclick="nextPage()">
+                    Próxima página ›
+                </button>
+
+            </div>
+
+
+            <div class="comic-frame">
+
+                <img
+                    id="comicPage"
+                    src="assets/hq/page-001.jpg"
+                    alt="Página da HQ Velocity Spider">
+
+                <div
+                    class="image-error"
+                    id="imageError">
+
+                    <div>
+
+                        <h2>Imagem não encontrada</h2>
+
+                        <p>
+                            Coloque a imagem:
+                        </p>
+
+                        <strong id="missingFile">
+                            assets/hq/page-001.jpg
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="controls">
+
+                <div class="control-group">
+
+                    <button
+                        class="control-btn"
+                        onclick="randomPage()">
+                        ⤨
+                    </button>
+
+                    <span>
+                        Página aleatória
+                    </span>
+
+                </div>
+
+
+                <div class="control-group">
+
+                    <input
+                        id="pageInput"
+                        class="page-number"
+                        type="number"
+                        min="1"
+                        max="15"
+                        value="1">
+
+                    <button
+                        class="control-btn"
+                        onclick="goToInput()">
+                        Ir para
+                    </button>
+
+                </div>
+
+
+                <div class="control-group">
+
+                    <button
+                        class="control-btn"
+                        onclick="zoomOut()">
+                        −
+                    </button>
+
+                    <span id="zoomText">
+                        100%
+                    </span>
+
+                    <button
+                        class="control-btn"
+                        onclick="zoomIn()">
+                        +
+                    </button>
+
+                    <button
+                        class="control-btn"
+                        onclick="fullscreen()">
+                        ⛶
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- THUMBNAILS -->
+
+        <div class="thumbnail-area" id="thumbnails">
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= RIGHT ================= -->
+
+    <aside class="right-column">
+
+        <section class="panel">
+
+            <div class="cover">
+
+                <img
+                    src="assets/capa.jpg"
+                    alt="Capa Velocity Spider">
+
+            </div>
+
+
+            <div class="details">
+
+                <div class="chapter-label">
+                    CAPÍTULO 01
+                </div>
+
+                <h2>
+                    O Despertar
+                </h2>
+
+                <div class="progress-text">
+
+                    <span>
+                        15 páginas
+                    </span>
+
+                    <span id="progressPercent">
+                        7% concluído
+                    </span>
+
+                </div>
+
+                <div class="progress">
+
+                    <div
+                        class="progress-bar"
+                        id="progressBar">
+                    </div>
+
+                </div>
+
+                <button
+                    class="next-btn"
+                    onclick="nextPage()">
+
+                    Ler próxima página →
+                    
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <section class="panel">
+
+            <div class="panel-title">
+                PÁGINAS DESTE CAPÍTULO
+            </div>
+
+            <div
+                class="page-grid"
+                id="pageGrid">
+            </div>
+
+        </section>
+
+
+        <section class="panel">
+
+            <div class="panel-title">
+                LEGENDA
+            </div>
+
+            <div class="legend">
+
+                <div class="legend-row">
+                    <div class="legend-icon">💬</div>
+                    Fala do personagem
+                </div>
+
+                <div class="legend-row">
+                    <div class="legend-icon">📖</div>
+                    Narrador
+                </div>
+
+                <div class="legend-row">
+                    <div class="legend-icon">💭</div>
+                    Pensamento
+                </div>
+
+                <div class="legend-row">
+                    <div class="legend-icon">⚡</div>
+                    Ação / Movimento
+                </div>
+
+                <div class="legend-row">
+                    <div class="legend-icon">🌙</div>
+                    Cena noturna
+                </div>
+
+                <div class="legend-row">
+                    <div class="legend-icon">☀️</div>
+                    Cena de dia
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <div class="quote">
+
+            “O verdadeiro poder não está
+            na velocidade...
+            mas na vontade de proteger
+            o que importa.”
+
+            <br><br>
+
+            — VELOCITY SPIDER
+
+        </div>
+
+    </aside>
+
+</main>
+
+
+<script>
+
+/* =========================================
+   CONFIGURAÇÃO
+========================================= */
+
+const TOTAL_PAGES = 15;
+
+let currentPage = 1;
+
+let zoom = 100;
+
+
+/* =========================================
+   CAMINHO DAS IMAGENS
+========================================= */
+
+function imagePath(page) {
+
+    const number =
+        String(page).padStart(3, "0");
+
+    return `assets/hq/page-${number}.jpg`;
+}
+
+
+/* =========================================
+   CAPÍTULOS
+========================================= */
+
+const chapters = [
+
+    "O Despertar",
+    "A Cidade em Choque",
+    "O Novo Inimigo",
+    "A Conspiração",
+    "O Laboratório Secreto",
+    "A Caçada",
+    "O Herói em Dúvida",
+    "A Fúria de Maximus",
+    "O Mundo Descobre",
+    "A Grande Batalha",
+    "O Exército de Vorax",
+    "A Cidade Invertida",
+    "O Segundo Kai",
+    "Queda Livre",
+    "O Coração da Máquina"
+
+];
+
+
+/* =========================================
+   CAPÍTULOS LATERAIS
+========================================= */
+
+function createChapters() {
+
+    const list =
+        document.getElementById("chapterList");
+
+    list.innerHTML = "";
+
+    chapters.forEach(
+        (name, index) => {
+
+            const div =
+                document.createElement("div");
+
+            div.className =
+                "chapter" +
+                (index === 0
+                    ? " active"
+                    : "");
+
+            const thumbnail =
+                String(index + 1)
+                .padStart(3, "0");
+
+            div.innerHTML = `
+
+                <img
+                    src="assets/hq/page-${thumbnail}.jpg"
+                    onerror="
+                        this.src='assets/capa.jpg'
+                    ">
+
+                <div class="chapter-info">
+
+                    <strong>
+                        Capítulo ${String(index + 1).padStart(2, "0")}
+                    </strong>
+
+                    <span>
+                        ${name}
+                    </span>
+
+                    <br>
+
+                    <span>
+                        15 páginas
+                    </span>
+
+                </div>
+            `;
+
+            div.onclick = () => {
+
+                document
+                    .querySelectorAll(".chapter")
+                    .forEach(
+                        c => c.classList.remove("active")
+                    );
+
+                div.classList.add("active");
+
+                currentPage = 1;
+
+                render();
+
+            };
+
+            list.appendChild(div);
+
+        }
+    );
+
+}
+
+
+/* =========================================
+   GRID DE PÁGINAS
+========================================= */
+
+function createPageGrid() {
+
+    const grid =
+        document.getElementById("pageGrid");
+
+    grid.innerHTML = "";
+
+    for (
+        let i = 1;
+        i <= TOTAL_PAGES;
+        i++
+    ) {
+
+        const button =
+            document.createElement("button");
+
+        button.textContent = i;
+
+        button.onclick = () => {
+
+            currentPage = i;
+
+            render();
+
+        };
+
+        grid.appendChild(button);
+
+    }
+
+}
+
+
+/* =========================================
+   MINIATURAS
+========================================= */
+
+function createThumbnails() {
+
+    const container =
+        document.getElementById("thumbnails");
+
+    container.innerHTML = "";
+
+    for (
+        let i = 1;
+        i <= TOTAL_PAGES;
+        i++
+    ) {
+
+        const item =
+            document.createElement("div");
+
+        item.className = "thumbnail";
+
+        const img =
+            document.createElement("img");
+
+        img.src = imagePath(i);
+
+        img.onerror = function() {
+
+            this.src =
+                "assets/capa.jpg";
+
+        };
+
+        const number =
+            document.createElement("span");
+
+        number.textContent = i;
+
+        item.appendChild(img);
+
+        item.appendChild(number);
+
+        item.onclick = () => {
+
+            currentPage = i;
+
+            render();
+
+        };
+
+        container.appendChild(item);
+
+    }
+
+}
+
+
+/* =========================================
+   RENDERIZAÇÃO
+========================================= */
+
+function render() {
+
+    const img =
+        document.getElementById("comicPage");
+
+    const error =
+        document.getElementById("imageError");
+
+    const missing =
+        document.getElementById("missingFile");
+
+    const path =
+        imagePath(currentPage);
+
+    img.style.display = "block";
+
+    error.style.display = "none";
+
+    img.src = path;
+
+    missing.textContent = path;
+
+    img.onerror = function() {
+
+        img.style.display = "none";
+
+        error.style.display = "flex";
+
+    };
+
+
+    document.getElementById(
+        "pageLabel"
+    ).textContent =
+        `Página ${currentPage} de ${TOTAL_PAGES}`;
+
+
+    document.getElementById(
+        "pageInput"
+    ).value = currentPage;
+
+
+    const percent =
+        Math.round(
+            (currentPage / TOTAL_PAGES) * 100
+        );
+
+    document.getElementById(
+        "progressBar"
+    ).style.width =
+        percent + "%";
+
+
+    document.getElementById(
+        "progressPercent"
+    ).textContent =
+        percent + "% concluído";
+
+
+    document
+        .querySelectorAll(".page-grid button")
+        .forEach(
+            (button, index) => {
+
+                button.classList.toggle(
+                    "active",
+                    index + 1 === currentPage
+                );
+
+            }
+        );
+
+
+    document
+        .querySelectorAll(".thumbnail")
+        .forEach(
+            (thumb, index) => {
+
+                thumb.classList.toggle(
+                    "active",
+                    index + 1 === currentPage
+                );
+
+            }
+        );
+
+}
+
+
+/* =========================================
+   NAVEGAÇÃO
+========================================= */
+
+function nextPage() {
+
+    if (
+        currentPage <
+        TOTAL_PAGES
+    ) {
+
+        currentPage++;
+
+        render();
+
+    }
+
+}
+
+
+function previousPage() {
+
+    if (
+        currentPage > 1
+    ) {
+
+        currentPage--;
+
+        render();
+
+    }
+
+}
+
+
+function randomPage() {
+
+    currentPage =
+        Math.floor(
+            Math.random() *
+            TOTAL_PAGES
+        ) + 1;
+
+    render();
+
+}
+
+
+/* =========================================
+   IR PARA PÁGINA
+========================================= */
+
+function goToInput() {
+
+    let value =
+        parseInt(
+            document.getElementById(
+                "pageInput"
+            ).value
+        );
+
+    if (
+        value >= 1 &&
+        value <= TOTAL_PAGES
+    ) {
+
+        currentPage = value;
+
+        render();
+
+    }
+
+}
+
+
+/* =========================================
+   ZOOM
+========================================= */
+
+function zoomIn() {
+
+    zoom += 10;
+
+    if (zoom > 180)
+        zoom = 180;
+
+    applyZoom();
+
+}
+
+
+function zoomOut() {
+
+    zoom -= 10;
+
+    if (zoom < 50)
+        zoom = 50;
+
+    applyZoom();
+
+}
+
+
+function applyZoom() {
+
+    const img =
+        document.getElementById(
+            "comicPage"
+        );
+
+    img.style.width =
+        zoom + "%";
+
+    document.getElementById(
+        "zoomText"
+    ).textContent =
+        zoom + "%";
+
+}
+
+
+/* =========================================
+   TELA CHEIA
+========================================= */
+
+function fullscreen() {
+
+    const element =
+        document.querySelector(
+            ".comic-frame"
+        );
+
+    if (
+        !document.fullscreenElement
+    ) {
+
+        element.requestFullscreen();
+
+    } else {
+
+        document.exitFullscreen();
+
+    }
+
+}
+
+
+/* =========================================
+   TECLADO
+========================================= */
+
+document.addEventListener(
+    "keydown",
+    function(event) {
+
+        if (
+            event.key === "ArrowRight"
+        ) {
+
+            nextPage();
+
+        }
+
+        if (
+            event.key === "ArrowLeft"
+        ) {
+
+            previousPage();
+
+        }
+
+        if (
+            event.key === "Escape"
+        ) {
+
+            if (
+                document.fullscreenElement
+            ) {
+
+                document.exitFullscreen();
+
+            }
+
+        }
+
+    }
+);
+
+
+/* =========================================
+   INICIALIZAÇÃO
+========================================= */
+
+createChapters();
+
+createPageGrid();
+
+createThumbnails();
+
+render();
+
+</script>
+
+</body>
+</html>
