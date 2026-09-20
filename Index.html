@@ -1,298 +1,109 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Velocity Spider — 300 Páginas</title>
-
-  <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-<header class="topbar">
-
-  <div class="logo">
-    <span>VELOCITY</span>
-    <strong>SPIDER</strong>
-  </div>
-
-  <nav>
-    <a href="#inicio">HQ</a>
-    <a href="#sagas">Sagas</a>
-    <a href="#capitulos">Capítulos</a>
-    <a href="#leitor">Leitor</a>
-  </nav>
-
-  <button class="menu" onclick="toggleMenu()">☰</button>
-
-</header>
-
-
-<main id="inicio">
-
-<section class="hero">
-
-  <div class="hero-content">
-
-    <div class="edition">
-      EDIÇÃO DIGITAL · 300 PÁGINAS
-    </div>
-
-    <h1>
-      Velocity<br>
-      <span>Spider.</span>
-    </h1>
-
-    <p>
-      Uma grande saga em quadrinhos com 30 capítulos
-      e 300 páginas de aventura, velocidade,
-      mistério e batalhas.
-    </p>
-
-    <div class="hero-buttons">
-      <button onclick="goToPage(1)">
-        ⚡ Começar HQ
-      </button>
-
-      <a href="#capitulos">
-        Explorar saga
-      </a>
-    </div>
-
-    <div class="stats">
-
-      <div>
-        <strong>300</strong>
-        <span>páginas</span>
-      </div>
-
-      <div>
-        <strong>30</strong>
-        <span>capítulos</span>
-      </div>
-
-      <div>
-        <strong>∞</strong>
-        <span>velocidade</span>
-      </div>
-
-    </div>
-
-  </div>
-
-
-  <div class="hero-art">
-
-    <div class="speed-lines"></div>
-
-    <div class="spider-character">
-
-      <div class="head">
-        <div class="eye left"></div>
-        <div class="eye right"></div>
-      </div>
-
-      <div class="body">
-        <div class="spider-symbol">✦</div>
-      </div>
-
-      <div class="leg l1"></div>
-      <div class="leg l2"></div>
-      <div class="leg l3"></div>
-      <div class="leg r1"></div>
-      <div class="leg r2"></div>
-      <div class="leg r3"></div>
-
-    </div>
-
-    <div class="collection">
-      COLLECTION #01
-    </div>
-
-  </div>
-
-</section>
-
-
-<section class="reader" id="leitor">
-
-  <div class="reader-header">
-
-    <div>
-
-      <span>LEITOR DE HQ</span>
-
-      <h2>
-        Página
-        <span id="pageNumber">001</span>
-        /
-        300
-      </h2>
-
-    </div>
-
-    <div class="reader-buttons">
-
-      <button onclick="previousPage()">←</button>
-      <button onclick="nextPage()">→</button>
-
-    </div>
-
-  </div>
-
-
-  <div class="comic">
-
-    <div class="comic-page" id="comicPage">
-
-      <div class="comic-number" id="comicNumber">
-        PÁGINA 001
-      </div>
-
-      <div class="comic-content">
-
-        <span class="panel-label">
-          PAINEL 1
-        </span>
-
-        <span class="chapter-label" id="chapterLabel">
-          CAPÍTULO 01
-        </span>
-
-        <div class="lightning">
-          ⚡
-        </div>
-
-        <h3>
-          VELOCITY SPIDER
-        </h3>
-
-        <h4 id="pageTitle">
-          O Despertar
-        </h4>
-
-        <p id="pageDescription">
-          A história começa.
-          Uma nova velocidade desperta.
-        </p>
-
-      </div>
-
-    </div>
-
-  </div>
-
-
-  <div class="reader-controls">
-
-    <button onclick="goToPage(1)">
-      Primeira página
-    </button>
-
-    <input
-      type="number"
-      id="pageInput"
-      min="1"
-      max="300"
-      placeholder="Página"
-      onchange="jumpPage()"
-    >
-
-    <button onclick="randomPage()">
-      Página aleatória
-    </button>
-
-    <button onclick="goToPage(300)">
-      Última página
-    </button>
-
-  </div>
-
-</section>
-
-
-<section class="saga" id="sagas">
-
-  <div class="section-title">
-    <span>30 CAPÍTULOS · 10 PÁGINAS CADA</span>
-
-    <h2>
-      Uma saga completa
-    </h2>
-  </div>
-
-
-  <div class="saga-grid">
-
-    <article>
-      <span>01–10</span>
-      <h3>O Despertar</h3>
-      <p>
-        Da origem de Kai à primeira grande corrida.
-      </p>
-    </article>
-
-    <article>
-      <span>11–20</span>
-      <h3>O Multiverso</h3>
-      <p>
-        Experimentos, portais e versões alternativas
-        do herói.
-      </p>
-    </article>
-
-    <article>
-      <span>21–30</span>
-      <h3>Além da Velocidade</h3>
-      <p>
-        Uma guerra final pela fonte de toda a energia.
-      </p>
-    </article>
-
-  </div>
-
-</section>
-
-
-<section class="chapters" id="capitulos">
-
-  <div class="section-title">
-
-    <span>ÍNDICE</span>
-
-    <h2>
-      30 capítulos
-    </h2>
-
-  </div>
-
-  <div class="chapter-grid" id="chapterGrid"></div>
-
-</section>
-
-
-<footer>
-
-  <div class="footer-logo">
-    VELOCITY SPIDER
-  </div>
-
-  <p>
-    HQ digital original.
-  </p>
-
-  <small>
-    © 2026
-  </small>
-
-</footer>
-
-</main>
-
-
-<script src="script.js"></script>
-
-</body>
-</html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Velocity Spider — HQ Digital</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bg: #020812;
+    --panel: #061323;
+    --panel2: #081a2e;
+    --blue: #00bfff;
+    --blue2: #1677ff;
+    --cyan: #00eaff;
+    --text: #eaf8ff;
+    --muted: #7893aa;
+    --border: rgba(0, 191, 255, .35);
+}
+
+body {
+    background:
+        radial-gradient(circle at 50% -10%, rgba(0, 180, 255, .15), transparent 40%),
+        linear-gradient(180deg, #020711, #01050b);
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+}
+
+/* ================= HEADER ================= */
+
+header {
+    border-bottom: 1px solid var(--border);
+    background: #020a14;
+}
+
+.banner {
+    height: 175px;
+    position: relative;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 5, 15, .98) 0%,
+            rgba(0, 5, 15, .75) 35%,
+            rgba(0, 5, 15, .25) 100%
+        ),
+        url("assets/header.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.logo {
+    position: absolute;
+    left: 28px;
+    top: 28px;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 36px;
+    line-height: .9;
+    color: white;
+    text-shadow:
+        0 0 8px #00d9ff,
+        0 0 25px #006cff;
+    letter-spacing: -2px;
+}
+
+.logo span {
+    color: var(--cyan);
+}
+
+.logo small {
+    display: block;
+    margin-top: 12px;
+    font-size: 10px;
+    letter-spacing: 5px;
+    color: #8edfff;
+}
+
+.banner-info {
+    position: absolute;
+    right: 35px;
+    top: 28px;
+    width: 280px;
+}
+
+.banner-info .chapter {
+    color: var(--cyan);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.banner-info h1 {
+    font-size: 27px;
+    margin: 5px 0;
+}
+
+.banner-info p {
+    color: #c5d5df;
+    line
