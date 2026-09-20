@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Todas as HQs — Velocity Spider Universe</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@400;600;700&family=Oswald:wght@300;500;700&display=swap" rel="stylesheet" />
+  <style>
+    .page-hero {
+      padding: 120px 2rem 4rem;
+      background: linear-gradient(180deg, rgba(232,18,26,0.1) 0%, var(--darker) 100%);
+      text-align: center;
+    }
+    .hqs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+    .hq-card {
+      background: var(--panel);
+      border: 2px solid var(--border);
+      border-top: 4px solid var(--red);
+      overflow: hidden;
+      position: relative;
+      transition: transform 0.25s, border-top-color 0.25s;
+      clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 0 100%);
+    }
+    .hq-card:hover {
+      transform: translateY(-6px);
+      border-top-color: var(--gold);
+    }
+    .hq-card-img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+    }
+    .hq-card-body { padding: 1.5rem; }
+    .hq-card-issue {
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.75rem;
+      letter-spacing: 3px;
+      color: var(--red);
+      text-transform: uppercase;
+      margin-bottom: 0.3rem;
+    }
+    .hq-card-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.6rem;
+      color: var(--text);
+      line-height: 1.1;
+      margin-bottom: 0.7rem;
+    }
+    .hq-card-desc {
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.6;
+      margin-bottom: 1.2rem;
+    }
+    .hq-badge {
+      display: inline-block;
+      padding: 0.25rem 0.7rem;
+      font-size: 0.7rem;
+      font-family: 'Oswald', sans-serif;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      clip-path: polygon(4px 0%, 100% 0%, calc(100% - 4px) 100%, 0% 100%);
+    }
+    .badge-available { background: var(--red); color: #fff; }
+    .badge-coming    { background: var(--panel); color: var(--muted); border: 1px solid var(--border); }
+    .timeline {
+      max-width: 700px;
+      margin: 4rem auto 0;
+      position: relative;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 20px; top: 0; bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--red), var(--gold), var(--red));
+    }
+    .timeline-item {
+      padding: 0 0 2.5rem 56px;
+      position: relative;
+    }
+    .timeline-dot {
+      position: absolute;
+      left: 10px; top: 4px;
+      width: 22px; height: 22px;
+      background: var(--red);
+      border: 3px solid var(--darker);
+      border-radius: 0;
+      transform: rotate(45deg);
+    }
+    .timeline-date {
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.75rem;
+      letter-spacing: 3px;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 0.3rem;
+    }
+    .timeline-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.5rem;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+    .timeline-text {
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="../index.html" class="nav-logo">VELOCITY<span>⚡</span>SPIDER</a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Início</a></li>
+      <li><a href="../index.html#origem">Origem</a></li>
+      <li><a href="hq1.html">HQ #1</a></li>
+      <li><a href="missao.html">Missão</a></li>
+      <li><a href="viloes.html">Vilões</a></li>
+    </ul>
+    <button class="nav-hamburger"><span></span><span></span><span></span></button>
+  </nav>
+
+  <div class="page-hero">
+    <p class="section-label">Universo VS</p>
+    <h1 class="section-title" style="font-size:clamp(3rem,8vw,6rem)">Todas as <em>HQs</em></h1>
+    <p style="color:var(--muted); font-size:1rem; letter-spacing:2px; text-transform:uppercase">Coleção Velocity Spider Universe</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <section>
+    <div class="section-inner">
+      <p class="section-label fade-up">Edições</p>
+      <h2 class="section-title fade-up">Coleção <em>Principal</em></h2>
+
+      <div class="hqs-grid">
+
+        <!-- HQ #1 -->
+        <div class="hq-card fade-up">
+          <img class="hq-card-img" src="../images/quad_row2.jpg" alt="HQ #1 capa" loading="lazy" />
+          <div class="hq-card-body">
+            <span class="hq-badge badge-available">Disponível</span>
+            <div class="hq-card-issue">Velocity Spider · Edição #1</div>
+            <div class="hq-card-title">O Carro Mais Rápido do Planeta</div>
+            <p class="hq-card-desc">A origem. O acidente, o objeto estranho, o traje e o momento em que tudo mudou. A estreia do herói mais rápido que o mundo já viu.</p>
+            <a href="hq1.html" class="btn btn-primary" style="display:block; text-align:center">Ler Agora</a>
+          </div>
+        </div>
+
+        <!-- HQ #2 -->
+        <div class="hq-card fade-up">
+          <img class="hq-card-img" src="../images/origin_row2.jpg" alt="HQ #2 capa" loading="lazy" />
+          <div class="hq-card-body">
+            <span class="hq-badge badge-coming">Em Breve</span>
+            <div class="hq-card-issue">Velocity Spider · Edição #2</div>
+            <div class="hq-card-title">A Ascensão do Dr. Vorax</div>
+            <p class="hq-card-desc">O criador do traje revela seus planos. Dr. Vorax quer o que ele mesmo criou — e não vai parar até ter controle absoluto da velocidade.</p>
+            <span class="btn btn-outline" style="display:block; text-align:center; opacity:0.5; cursor:not-allowed">Em Breve</span>
+          </div>
+        </div>
+
+        <!-- HQ #3 -->
+        <div class="hq-card fade-up">
+          <img class="hq-card-img" src="../images/origin_row3.jpg" alt="HQ #3 capa" loading="lazy" />
+          <div class="hq-card-body">
+            <span class="hq-badge badge-coming">Em Breve</span>
+            <div class="hq-card-issue">Velocity Spider · Edição #3</div>
+            <div class="hq-card-title">Correndo, Balançando, Lutando</div>
+            <p class="hq-card-desc">O maior confronto da série. Velocity Spider enfrenta Dr. Vorax em uma batalha que vai redefinir quem controla a velocidade no planeta.</p>
+            <span class="btn btn-outline" style="display:block; text-align:center; opacity:0.5; cursor:not-allowed">Em Breve</span>
+          </div>
+        </div>
+
+        <!-- HQ #4 -->
+        <div class="hq-card fade-up">
+          <img class="hq-card-img" src="../images/quad_row3.jpg" alt="HQ #4 capa" loading="lazy" />
+          <div class="hq-card-body">
+            <span class="hq-badge badge-coming">Em Breve</span>
+            <div class="hq-card-issue">Velocity Spider · Edição #4</div>
+            <div class="hq-card-title">O Homem Mais Rápido do Mundo</div>
+            <p class="hq-card-desc">Além dos recordes, além dos crimes. Uma jornada pelo mundo inteiro — do Brasil ao Japão — em menos de 90 minutos.</p>
+            <span class="btn btn-outline" style="display:block; text-align:center; opacity:0.5; cursor:not-allowed">Em Breve</span>
+          </div>
+        </div>
+
+        <!-- HQ #5 -->
+        <div class="hq-card fade-up">
+          <img class="hq-card-img" src="../images/quad_row1.jpg" alt="HQ #5 capa" loading="lazy" />
+          <div class="hq-card-body">
+            <span class="hq-badge badge-coming">Em Breve</span>
+            <div class="hq-card-issue">Velocity Spider · Edição #5</div>
+            <div class="hq-card-title">A Teia que Salva</div>
+            <p class="hq-card-desc">Quando a velocidade não é suficiente, a teia é o que separa a vida da morte. Um conto sobre o poder da precisão sobre a força bruta.</p>
+            <span class="btn btn-outline" style="display:block; text-align:center; opacity:0.5; cursor:not-allowed">Em Breve</span>
+          </div>
+        </div>
+
+        <!-- HQ #6 -->
+        <div class="hq-card fade-up">
+          <img class="hq-card-img" src="../images/origin_row1.jpg" alt="HQ #6 capa" loading="lazy" />
+          <div class="hq-card-body">
+            <span class="hq-badge badge-coming">Em Breve</span>
+            <div class="hq-card-issue">Velocity Spider · Edição #6</div>
+            <div class="hq-card-title">Velocity Labs: A Verdade</div>
+            <p class="hq-card-desc">O que a Velocity Labs realmente queria criar? A história por trás do projeto secreto que deu origem ao herói — e ao vilão.</p>
+            <span class="btn btn-outline" style="display:block; text-align:center; opacity:0.5; cursor:not-allowed">Em Breve</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- TIMELINE -->
+  <section style="background:var(--panel)">
+    <div class="section-inner">
+      <p class="section-label fade-up">Cronologia</p>
+      <h2 class="section-title fade-up">A Linha do <em>Tempo</em></h2>
+
+      <div class="timeline">
+        <div class="timeline-item fade-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Ano 0 — Antes</div>
+          <div class="timeline-title">O Acidente</div>
+          <p class="timeline-text">Um jovem apaixonado por velocidade perde sua família em um acidente. Decide que não vai desistir — vai fazer a diferença.</p>
+        </div>
+        <div class="timeline-item fade-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Ano 1 — Descoberta</div>
+          <div class="timeline-title">O Objeto Estranho</div>
+          <p class="timeline-text">Em um laboratório abandonado, encontra um objeto que libera uma energia desconhecida. O primeiro contato com seus poderes.</p>
+        </div>
+        <div class="timeline-item fade-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Ano 2 — Treinamento</div>
+          <div class="timeline-title">O Traje e os Poderes</div>
+          <p class="timeline-text">Descobre a Velocity Labs e o projeto secreto. Coloca o traje pela primeira vez e compreende a fusão entre velocidade e teia.</p>
+        </div>
+        <div class="timeline-item fade-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Ano 3 — Agora</div>
+          <div class="timeline-title">O Herói em Ação</div>
+          <p class="timeline-text">Já é o ser mais rápido do planeta. Protege inocentes, quebra recordes e enfrenta o maior inimigo que ele mesmo ajudou a criar.</p>
+        </div>
+        <div class="timeline-item fade-up">
+          <div class="timeline-dot" style="background:var(--gold)"></div>
+          <div class="timeline-date">Em Breve</div>
+          <div class="timeline-title">O Futuro</div>
+          <p class="timeline-text">A batalha decisiva contra Dr. Vorax. O destino da velocidade — e do mundo — está em jogo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-logo">VELOCITY<span>⚡</span>SPIDER</div>
+    <p class="footer-tagline">Mais Rápido · Mais Forte · Mais Livre</p>
+    <ul class="footer-links">
+      <li><a href="../index.html">Início</a></li>
+      <li><a href="hq1.html">HQ #1</a></li>
+      <li><a href="origem.html">Origem</a></li>
+      <li><a href="missao.html">Missão</a></li>
+      <li><a href="viloes.html">Vilões</a></li>
+    </ul>
+    <p class="footer-copy">© 2025 Velocity Spider Universe. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Missão — Velocity Spider</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@400;600;700&family=Oswald:wght@300;500;700&display=swap" rel="stylesheet" />
+  <style>
+    .page-hero {
+      padding: 120px 2rem 4rem;
+      background: linear-gradient(180deg, rgba(232,18,26,0.1) 0%, var(--darker) 100%);
+      text-align: center;
+    }
+    .manifesto {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+    }
+    .manifesto-line {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      color: var(--text);
+      line-height: 1.1;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1rem;
+    }
+    .manifesto-line em { color: var(--gold); font-style: normal; }
+    .manifesto-line span { color: var(--red); }
+    .manifesto-body {
+      color: var(--muted);
+      font-size: 1.1rem;
+      line-height: 1.85;
+      margin-bottom: 3rem;
+    }
+    .manifesto-body strong { color: var(--text); }
+    .values-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      background: var(--border);
+      margin: 3rem 0;
+    }
+    .value-cell {
+      background: var(--panel);
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+    }
+    .value-word {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2.5rem;
+      color: var(--red);
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    .value-cell p { color: var(--muted); font-size:0.9rem; line-height:1.6; }
+    .credo {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-left: 5px solid var(--gold);
+      padding: 2.5rem;
+      margin: 3rem 0;
+    }
+    .credo p {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.2rem;
+      color: var(--text);
+      line-height: 1.9;
+      font-weight: 300;
+    }
+    .credo p strong { color: var(--gold); font-weight: 700; }
+    .comic-showcase {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 3rem 0;
+    }
+    .comic-showcase img {
+      width: 100%; display: block;
+      border: 2px solid var(--border);
+    }
+    @media(max-width:600px) {
+      .values-strip, .comic-showcase { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="../index.html" class="nav-logo">VELOCITY<span>⚡</span>SPIDER</a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Início</a></li>
+      <li><a href="origem.html">Origem</a></li>
+      <li><a href="hq1.html">HQ #1</a></li>
+      <li><a href="hqs.html">HQs</a></li>
+      <li><a href="viloes.html">Vilões</a></li>
+    </ul>
+    <button class="nav-hamburger"><span></span><span></span><span></span></button>
+  </nav>
+
+  <div class="page-hero">
+    <p class="section-label">Filosofia</p>
+    <h1 class="section-title" style="font-size:clamp(3rem,8vw,6rem)">A <em>Missão</em></h1>
+    <p style="color:var(--muted); font-size:1rem; letter-spacing:3px; text-transform:uppercase">Por que ele não vai parar</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="manifesto">
+
+    <div class="manifesto-line fade-up">Mas ser um herói não é só sobre <em>poderes</em>...</div>
+    <div class="manifesto-body fade-up">
+      É sobre nunca desistir. Mesmo quando o mundo parece contra você.
+      <strong>Ele é a prova de que um recomeço é possível.</strong>
+    </div>
+
+    <div class="comic-showcase fade-up">
+      <img src="../images/origin_row2.jpg" alt="Velocity Spider em combate" loading="lazy" />
+      <img src="../images/quad_row2.jpg" alt="Velocity Spider — velocidade em ação" loading="lazy" />
+    </div>
+
+    <div class="manifesto-line fade-up">Velocidade não é sobre <span>competir</span>. É sobre <em>chegar antes</em>.</div>
+    <div class="manifesto-body fade-up">
+      Cada milissegundo conta. Cada vida que ele salva começa com a decisão
+      de <strong>mover-se antes que o mal se instale</strong>. A velocidade é
+      a ferramenta — mas a vontade de fazer o certo é o combustível.
+    </div>
+
+    <div class="values-strip fade-up">
+      <div class="value-cell">
+        <span class="value-word">Velocidade</span>
+        <p>Chegar onde ninguém chega, no tempo em que ninguém chega.</p>
+      </div>
+      <div class="value-cell">
+        <span class="value-word">Controle</span>
+        <p>Poder sem controle é destruição. Cada ação é calculada.</p>
+      </div>
+      <div class="value-cell">
+        <span class="value-word">Liberdade</span>
+        <p>A liberdade de proteger quem ele ama, onde quer que estejam.</p>
+      </div>
+    </div>
+
+    <div class="credo fade-up">
+      <p>
+        <strong>"Combato o crime.</strong> Protejo os inocentes.
+        Escalo paredes, balanço entre prédios, corro mais que qualquer carro.<br><br>
+        Mas acima de tudo — <strong>eu nunca vou parar.</strong><br><br>
+        Enquanto eles veem uma estrada, eu vejo um borrão.
+        Porque para mim... a velocidade não é um limite.
+        <strong>É apenas o começo."</strong>
+      </p>
+    </div>
+
+    <img src="../images/origin_row3.jpg" alt="Velocity Spider olhando para o horizonte" loading="lazy"
+      class="fade-up" style="width:100%; border:3px solid var(--border); display:block; margin:2rem 0" />
+
+    <div class="manifesto-line fade-up"><em>Alguns sonham</em> em ser heróis...</div>
+    <div class="manifesto-body fade-up">
+      <strong>Eu tive que me tornar um.</strong> A velocidade foi o veículo.
+      A perda foi o combustível. E a missão — proteger, correr, salvar —
+      é tudo o que resta quando você decide não desperdiçar o que recebeu.
+    </div>
+
+    <div style="text-align:center; margin-top:2rem">
+      <a href="hq1.html" class="btn btn-primary">Ler HQ #1</a>
+      &nbsp;
+      <a href="../index.html" class="btn btn-outline">← Início</a>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="footer-logo">VELOCITY<span>⚡</span>SPIDER</div>
+    <p class="footer-tagline">Mais Rápido · Mais Forte · Mais Livre</p>
+    <p class="footer-copy">© 2025 Velocity Spider Universe. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

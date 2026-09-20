@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HQ #1 — O Carro Mais Rápido | Velocity Spider</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@400;600;700&family=Oswald:wght@300;500;700&display=swap" rel="stylesheet" />
+  <style>
+    .page-hero {
+      padding: 120px 2rem 4rem;
+      background: linear-gradient(180deg, rgba(232,18,26,0.12) 0%, var(--darker) 100%);
+      text-align: center;
+    }
+    .hq-issue {
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.8rem;
+      letter-spacing: 5px;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+    .hq-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(3rem, 8vw, 6rem);
+      line-height: 1;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+    .hq-sub {
+      font-family: 'Oswald', sans-serif;
+      color: var(--muted);
+      letter-spacing: 3px;
+      font-size: 1rem;
+      text-transform: uppercase;
+    }
+    .hq-reader {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 3rem 2rem 6rem;
+    }
+    .hq-chapter {
+      margin-bottom: 4rem;
+    }
+    .chapter-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .chapter-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 4rem;
+      color: var(--red);
+      line-height: 1;
+      opacity: 0.4;
+    }
+    .chapter-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2rem;
+      color: var(--text);
+      line-height: 1;
+    }
+    .hq-panel {
+      border: 3px solid var(--border);
+      margin-bottom: 1rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .hq-panel img {
+      width: 100%;
+      display: block;
+    }
+    .speech-box {
+      background: #fff;
+      color: #0a0a0f;
+      border: 2px solid #0a0a0f;
+      border-radius: 6px;
+      padding: 0.8rem 1.2rem;
+      font-family: 'Rajdhani', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      line-height: 1.4;
+      position: relative;
+      display: inline-block;
+      max-width: 320px;
+      margin: 1rem 0;
+    }
+    .speech-box::before {
+      content: '';
+      position: absolute;
+      bottom: -12px; left: 20px;
+      width: 0; height: 0;
+      border-left: 12px solid transparent;
+      border-right: 0px solid transparent;
+      border-top: 12px solid #0a0a0f;
+    }
+    .narration-box {
+      background: var(--gold);
+      color: #0a0a0f;
+      padding: 0.7rem 1.2rem;
+      font-family: 'Rajdhani', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      margin: 1rem 0;
+      display: block;
+      clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
+    }
+    .hq-text-block {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--red);
+      padding: 1.5rem 2rem;
+      margin: 1.5rem 0;
+      font-size: 1rem;
+      color: var(--muted);
+      line-height: 1.8;
+      font-style: italic;
+    }
+    .sfx {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 3rem;
+      color: var(--gold);
+      letter-spacing: 4px;
+      text-align: center;
+      padding: 1rem 0;
+      text-shadow: 2px 2px 0 var(--red), -2px -2px 0 rgba(0,0,0,0.5);
+    }
+    .page-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem;
+      border-top: 2px solid var(--border);
+    }
+    .hq-two-panel {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4px;
+      margin-bottom: 1rem;
+    }
+    @media (max-width: 600px) {
+      .hq-two-panel { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="../index.html" class="nav-logo">VELOCITY<span>⚡</span>SPIDER</a>
+    <ul class="nav-links">
+      <li><a href="../index.html#origem">Origem</a></li>
+      <li><a href="../index.html#poderes">Poderes</a></li>
+      <li><a href="../index.html#quadrinhos">Quadrinhos</a></li>
+      <li><a href="hqs.html" style="color:var(--gold)">Todas as HQs</a></li>
+    </ul>
+    <button class="nav-hamburger"><span></span><span></span><span></span></button>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <p class="hq-issue">Velocity Spider · Edição #1</p>
+    <h1 class="hq-title">O Carro Mais<br>Rápido do Planeta</h1>
+    <p class="hq-sub">Velocidade · Controle · Liberdade</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- HQ READER -->
+  <main class="hq-reader">
+
+    <!-- CAPÍTULO 1 -->
+    <div class="hq-chapter fade-up">
+      <div class="chapter-header">
+        <span class="chapter-num">01</span>
+        <div>
+          <div class="chapter-title">Um Jovem Comum</div>
+        </div>
+      </div>
+
+      <div class="hq-text-block">
+        Tudo começou com um simples acidente. Ele era apenas um jovem apaixonado por carros e velocidade. Nada demais...
+      </div>
+
+      <div class="hq-panel">
+        <img src="../images/quad_row1.jpg" alt="O jovem herói antes de tudo começar" loading="lazy" />
+      </div>
+
+      <div style="padding:1rem 0">
+        <span class="narration-box">Até que encontrei um objeto estranho, num laboratório abandonado.</span>
+      </div>
+
+      <div class="speech-box">
+        Quando toquei no objeto, uma energia desconhecida entrou em mim. Foi nesse momento que eu descobri meu verdadeiro poder...
+      </div>
+
+      <div class="sfx">CRACK!</div>
+    </div>
+
+    <!-- CAPÍTULO 2 -->
+    <div class="hq-chapter fade-up">
+      <div class="chapter-header">
+        <span class="chapter-num">02</span>
+        <div><div class="chapter-title">A Aceleração</div></div>
+      </div>
+
+      <div class="hq-text-block">
+        Com o tempo, treinou, controlou seus poderes e desenvolveu um uniforme azul, feito sob medida para sua velocidade.
+      </div>
+
+      <div class="hq-two-panel">
+        <div class="hq-panel">
+          <img src="../images/origin_row1.jpg" alt="O herói treina seus poderes" loading="lazy" />
+        </div>
+        <div class="hq-panel">
+          <img src="../images/origin_row2.jpg" alt="Velocity Spider em ação" loading="lazy" />
+        </div>
+      </div>
+
+      <div class="speech-box">
+        Eu podia mover meu corpo e tudo ao meu redor em velocidade absurda!
+      </div>
+      <br>
+      <div class="speech-box" style="float:right; margin-right:0">
+        Eu não sou o Flash. Eu sou eu.
+      </div>
+      <div style="clear:both"></div>
+    </div>
+
+    <!-- CAPÍTULO 3 -->
+    <div class="hq-chapter fade-up">
+      <div class="chapter-header">
+        <span class="chapter-num">03</span>
+        <div><div class="chapter-title">O Carro Mais Rápido</div></div>
+      </div>
+
+      <div class="hq-text-block">
+        Então, decidiu levar sua paixão ao próximo nível. Com sua aceleração, criou o carro mais rápido do planeta. Um veículo projetado para suportar velocidades incríveis.
+      </div>
+
+      <div class="hq-panel">
+        <img src="../images/quad_row2.jpg" alt="O carro mais rápido do planeta em ação" loading="lazy" />
+      </div>
+
+      <div class="sfx">WHOOOOSH!</div>
+
+      <div class="speech-box">
+        Isso é real... Eu sou mais rápido do que qualquer outro veículo!
+      </div>
+      <br>
+      <span class="narration-box">Minha velocidade aumentava a cada segundo. Eu quebrava recordes, um após o outro.</span>
+    </div>
+
+    <!-- CAPÍTULO 4 -->
+    <div class="hq-chapter fade-up">
+      <div class="chapter-header">
+        <span class="chapter-num">04</span>
+        <div><div class="chapter-title">Lendas e Recordes</div></div>
+      </div>
+
+      <div class="hq-text-block">
+        Em pouco tempo, ele já era o mais rápido do planeta. Seus recordes eram lendas: 1.200 km/h na Terra, volta ao mundo em 1h 12min, aceleração 0–500 km/h em 2,3 segundos.
+      </div>
+
+      <div class="hq-panel">
+        <img src="../images/quad_row3.jpg" alt="Velocity Spider — recordes mundiais" loading="lazy" />
+      </div>
+
+      <span class="narration-box">Hoje, sou conhecido como o carro mais rápido do planeta. Não sou um herói com nome famoso como o Flash. Eu sou apenas...</span>
+      <br>
+      <div class="speech-box" style="max-width:400px">
+        O homem mais rápido do mundo.
+      </div>
+    </div>
+
+    <!-- CAPÍTULO 5 -->
+    <div class="hq-chapter fade-up">
+      <div class="chapter-header">
+        <span class="chapter-num">05</span>
+        <div><div class="chapter-title">Mais que Velocidade</div></div>
+      </div>
+
+      <div class="hq-text-block">
+        Mas a velocidade não é apenas sobre competir. É sobre liberdade. É sobre ver o mundo de um jeito diferente.
+      </div>
+
+      <div class="hq-two-panel">
+        <div class="hq-panel">
+          <img src="../images/origin_row3.jpg" alt="Velocity Spider protegendo os inocentes" loading="lazy" />
+        </div>
+        <div class="hq-panel" style="background:var(--panel); display:flex; flex-direction:column; justify-content:center; padding:2rem;">
+          <div class="speech-box" style="max-width:100%">
+            Enquanto eles veem uma estrada... Eu vejo um borrão.
+          </div>
+          <br>
+          <div class="speech-box" style="max-width:100%">
+            Porque para mim... A velocidade não é um limite. É apenas o começo.
+          </div>
+        </div>
+      </div>
+
+      <div class="hq-text-block">
+        Eu ainda tenho sonhos. Quero explorar o mundo, quebrar novos recordes e descobrir até onde minha aceleração pode me levar.
+      </div>
+
+      <span class="narration-box">E assim, o mais rápido do planeta continua sua jornada...</span>
+
+      <div class="sfx" style="font-size:4rem; color:var(--red)">NÃO É O FLASH.<br>É OUTRO. E ELE É AZUL.</div>
+    </div>
+
+    <!-- FIM -->
+    <div style="text-align:center; padding:3rem 0; border-top: 2px solid var(--border)">
+      <div style="font-family:'Bebas Neue',sans-serif; font-size:3.5rem; color:var(--red); letter-spacing:3px; text-shadow: 0 0 20px rgba(232,18,26,0.4)">
+        O CARRO MAIS RÁPIDO DO PLANETA
+      </div>
+      <div style="font-family:'Oswald',sans-serif; font-size:1rem; letter-spacing:4px; color:var(--gold); margin-top:0.5rem; text-transform:uppercase">
+        Velocidade · Controle · Liberdade
+      </div>
+      <div style="font-family:'Bebas Neue',sans-serif; font-size:1.5rem; color:var(--muted); margin-top:2rem; letter-spacing:2px">
+        EU SOU O MAIS RÁPIDO.
+      </div>
+    </div>
+
+  </main>
+
+  <!-- PAGE NAV -->
+  <div class="page-nav">
+    <a href="../index.html" class="btn btn-outline">← Voltar ao Início</a>
+    <a href="hqs.html" class="btn btn-primary">Ver Todas as HQs →</a>
+  </div>
+
+  <footer>
+    <div class="footer-logo">VELOCITY<span>⚡</span>SPIDER</div>
+    <p class="footer-tagline">Mais Rápido · Mais Forte · Mais Livre</p>
+    <p class="footer-copy">© 2025 Velocity Spider Universe. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

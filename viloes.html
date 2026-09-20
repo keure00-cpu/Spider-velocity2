@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vilões — Velocity Spider Universe</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@400;600;700&family=Oswald:wght@300;500;700&display=swap" rel="stylesheet" />
+  <style>
+    .page-hero {
+      padding: 120px 2rem 4rem;
+      background: linear-gradient(180deg, rgba(155,48,240,0.1) 0%, var(--darker) 100%);
+      text-align: center;
+    }
+    .villain-full {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 4rem 2rem 6rem;
+    }
+    .villain-profile {
+      background: var(--panel);
+      border: 1px solid #2a0a2a;
+      margin-bottom: 3rem;
+      overflow: hidden;
+      clip-path: polygon(0 0, calc(100% - 24px) 0, 100% 24px, 100% 100%, 24px 100%, 0 calc(100% - 24px));
+    }
+    .villain-header {
+      background: linear-gradient(135deg, #1a0a1a, #0a0010);
+      padding: 2.5rem;
+      border-bottom: 2px solid #2a0a2a;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 2rem;
+      align-items: center;
+    }
+    .v-icon { font-size: 5rem; filter: drop-shadow(0 0 15px #9b30f0); }
+    .v-name {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      color: #9b30f0;
+      line-height: 1;
+      margin-bottom: 0.3rem;
+      text-shadow: 0 0 20px rgba(155,48,240,0.4);
+    }
+    .v-alias {
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.8rem;
+      letter-spacing: 3px;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+    .villain-body { padding: 2.5rem; }
+    .villain-body p {
+      color: var(--muted);
+      line-height: 1.85;
+      margin-bottom: 1.2rem;
+      font-size: 1.05rem;
+    }
+    .villain-body p strong { color: var(--text); }
+    .v-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+    .v-stat {
+      background: var(--dark);
+      padding: 1.2rem;
+      text-align: center;
+      border-top: 2px solid #9b30f0;
+    }
+    .v-stat-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2rem;
+      color: #9b30f0;
+      display: block;
+    }
+    .v-stat-label {
+      font-size: 0.75rem;
+      color: var(--muted);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    .v-abilities {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1.5rem;
+    }
+    .v-ability {
+      padding: 0.35rem 0.9rem;
+      font-size: 0.8rem;
+      font-family: 'Oswald', sans-serif;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      border: 1px solid #9b30f0;
+      color: #9b30f0;
+      clip-path: polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%);
+    }
+    .versus-banner {
+      background: var(--red);
+      padding: 3rem 2rem;
+      text-align: center;
+      margin: 3rem 0;
+    }
+    .versus-banner .vs-text {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2rem,6vw,4rem);
+      color: #fff;
+      letter-spacing: 4px;
+    }
+    .showdown-img {
+      width: 100%;
+      border: 3px solid var(--border);
+      display: block;
+      margin: 2rem 0;
+    }
+    @media(max-width:600px) {
+      .villain-header { grid-template-columns:1fr; }
+      .v-stats { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="../index.html" class="nav-logo">VELOCITY<span>⚡</span>SPIDER</a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Início</a></li>
+      <li><a href="origem.html">Origem</a></li>
+      <li><a href="hq1.html">HQ #1</a></li>
+      <li><a href="hqs.html">HQs</a></li>
+      <li><a href="missao.html">Missão</a></li>
+    </ul>
+    <button class="nav-hamburger"><span></span><span></span><span></span></button>
+  </nav>
+
+  <div class="page-hero">
+    <p class="section-label" style="color:#9b30f0">Antagonistas</p>
+    <h1 class="section-title" style="font-size:clamp(3rem,8vw,6rem); color:#9b30f0">Galeria de <em style="color:var(--text)">Vilões</em></h1>
+    <p style="color:var(--muted); font-size:1rem; letter-spacing:3px; text-transform:uppercase">Os que ousam enfrentar a velocidade</p>
+  </div>
+
+  <div class="divider" style="background:linear-gradient(to right, transparent, #9b30f0, transparent)"></div>
+
+  <div class="villain-full">
+
+    <!-- DR. VORAX -->
+    <div class="villain-profile fade-up">
+      <div class="villain-header">
+        <div class="v-icon">🦾</div>
+        <div>
+          <div class="v-name">DR. VORAX</div>
+          <div class="v-alias">Criador do Traje · Ex-Diretor da Velocity Labs · Antagonista Principal</div>
+        </div>
+      </div>
+      <div class="villain-body">
+        <p>
+          <strong>Viktor Vorax</strong> foi o gênio por trás do projeto mais ambicioso da Velocity Labs —
+          um traje que fundia a velocidade extrema com os poderes da teia. Para ele, era
+          a prova definitiva de que a ciência podia superar qualquer limite humano.
+        </p>
+        <p>
+          O que ele não esperava era que o traje seria usado contra a sua própria agenda.
+          Quando o herói vestiu o traje e o usou para proteger inocentes em vez de servir
+          ao laboratório, <strong>Vorax enlouqueceu</strong>. Em sua mente, o herói não é
+          um protetor — é uma arma roubada que precisa ser recuperada.
+        </p>
+        <p>
+          Desde então, dedicou todos os seus recursos, inteligência e tecnologia avançada
+          para uma única missão: <strong>capturar Velocity Spider e usar a velocidade
+          para dominar o mundo</strong>.
+        </p>
+
+        <div class="v-stats">
+          <div class="v-stat">
+            <span class="v-stat-num">9.8</span>
+            <span class="v-stat-label">QI (escala adaptada)</span>
+          </div>
+          <div class="v-stat">
+            <span class="v-stat-num">∞</span>
+            <span class="v-stat-label">Recursos Tecnológicos</span>
+          </div>
+          <div class="v-stat">
+            <span class="v-stat-num">MAX</span>
+            <span class="v-stat-label">Nível de Ameaça</span>
+          </div>
+        </div>
+
+        <div class="v-abilities">
+          <span class="v-ability">Gênio Tecnológico</span>
+          <span class="v-ability">Armadura Exo-Suit</span>
+          <span class="v-ability">Controle de Drones</span>
+          <span class="v-ability">Campo de Força</span>
+          <span class="v-ability">Supressor de Velocidade</span>
+          <span class="v-ability">Rede Neural Artificial</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONFRONTO -->
+    <div class="versus-banner fade-up">
+      <div class="vs-text">VELOCITY SPIDER VS DR. VORAX</div>
+      <p style="color:rgba(255,255,255,0.7); font-family:'Oswald',sans-serif; letter-spacing:3px; font-size:0.9rem; margin-top:0.5rem; text-transform:uppercase">
+        O Criador contra a Criação
+      </p>
+    </div>
+
+    <img src="../images/origin_row3.jpg" alt="O confronto entre Velocity Spider e Dr. Vorax" class="showdown-img fade-up" loading="lazy" />
+
+    <!-- SEGUNDO VILÃO: PHANTOM WIRE -->
+    <div class="villain-profile fade-up" style="border-color:#1a2a1a">
+      <div class="villain-header" style="background:linear-gradient(135deg,#0a1a0a,#001000)">
+        <div class="v-icon" style="filter:drop-shadow(0 0 15px #30f060)">🕷️</div>
+        <div>
+          <div class="v-name" style="color:#30f060; text-shadow: 0 0 20px rgba(48,240,96,0.4)">PHANTOM WIRE</div>
+          <div class="v-alias">Mercenário de Teia · Assassino Silencioso · Antagonista Secundário</div>
+        </div>
+      </div>
+      <div class="villain-body">
+        <p>
+          Ninguém sabe de onde ele veio. O que se sabe é que <strong>Phantom Wire</strong>
+          domina uma versão corrompida da tecnologia de teia — uma teia negra e venenosa
+          capaz de paralisar qualquer alvo.
+        </p>
+        <p>
+          Contratado por Vorax para capturar Velocity Spider, ele é o oposto do herói:
+          lento, silencioso, preciso como um cirurgião. Onde o herói age com velocidade,
+          ele age com <strong>paciência e emboscadas</strong>.
+        </p>
+
+        <div class="v-abilities" style="border-color:#30f060">
+          <span class="v-ability" style="border-color:#30f060; color:#30f060">Teia Paralisante</span>
+          <span class="v-ability" style="border-color:#30f060; color:#30f060">Invisibilidade</span>
+          <span class="v-ability" style="border-color:#30f060; color:#30f060">Escalada Silenciosa</span>
+          <span class="v-ability" style="border-color:#30f060; color:#30f060">Rastreador Neural</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- TERCEIRO VILÃO: APEX -->
+    <div class="villain-profile fade-up" style="border-color:#2a1a0a">
+      <div class="villain-header" style="background:linear-gradient(135deg,#1a0a00,#0a0500)">
+        <div class="v-icon" style="filter:drop-shadow(0 0 15px #f08030)">🔥</div>
+        <div>
+          <div class="v-name" style="color:#f08030; text-shadow: 0 0 20px rgba(240,128,48,0.4)">APEX</div>
+          <div class="v-alias">O Supressor de Velocidade · Criatura do Laboratório · Antagonista em Ascensão</div>
+        </div>
+      </div>
+      <div class="villain-body">
+        <p>
+          O experimento que a Velocity Labs nunca deveria ter feito. <strong>Apex</strong>
+          foi criado com a única finalidade de <em>neutralizar</em> super velocidade.
+          Seu corpo gera um campo de resistência cinética — tornando a velocidade
+          de Velocity Spider um problema, não uma vantagem.
+        </p>
+        <p>
+          Contra Apex, correr mais rápido é correr em direção ao perigo.
+          Ele é o vilão que <strong>transforma o maior poder do herói em fraqueza</strong>.
+        </p>
+
+        <div class="v-abilities">
+          <span class="v-ability" style="border-color:#f08030; color:#f08030">Campo Cinético</span>
+          <span class="v-ability" style="border-color:#f08030; color:#f08030">Supressor de Velocidade</span>
+          <span class="v-ability" style="border-color:#f08030; color:#f08030">Força Bruta</span>
+          <span class="v-ability" style="border-color:#f08030; color:#f08030">Regeneração</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center; margin-top:2rem">
+      <a href="hq1.html" class="btn btn-primary">Ver o Primeiro Confronto →</a>
+      &nbsp;
+      <a href="../index.html" class="btn btn-outline">← Início</a>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="footer-logo">VELOCITY<span>⚡</span>SPIDER</div>
+    <p class="footer-tagline">Mais Rápido · Mais Forte · Mais Livre</p>
+    <p class="footer-copy">© 2025 Velocity Spider Universe. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
